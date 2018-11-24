@@ -29,6 +29,7 @@ class Juego {
     siguienteNivel(){
         //cada vez q llegue al sig nivel ilumina
         this.iluminarSecuencia()
+        this.agregarEventosClick()
     }
     transformarNumeroAColor(numero){
         switch (numero) {
@@ -63,6 +64,18 @@ class Juego {
     }
     apagarColor(color){
         this.colores[color].classList.remove('light')
+    }
+    agregarEventosClick(){
+        // .bind(this) ata la referencia al juego ya que en el camino se puede perder el contexto y la trasladaria al boton
+        // var self = this o var _this = this
+        // this.elegirColor = this.elegirColor.bind(this) inicializado en el constructor no necesitaria bind en cada elemento
+        this.colores.celeste.addEventListener('click', this.elegirColor.bind(this))
+        this.colores.violeta.addEventListener('click', this.elegirColor.bind(this))
+        this.colores.naranja.addEventListener('click', this.elegirColor.bind(this))
+        this.colores.verde.addEventListener('click', this.elegirColor.bind(this))
+    }
+    elegirColor(event){
+        console.log(this)
     }
 }
 function empezarJuego() {
