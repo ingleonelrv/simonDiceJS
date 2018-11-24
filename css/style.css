@@ -32,25 +32,25 @@ body {
 .celeste {
   background: #22a6b3;
 }
-.celeste .light {
+.celeste.light {
   background: #7ed6df;
 }
 .violeta {
   background: #be2edd;
 }
-.violeta .light {
+.violeta.light {
   background: #e056fd;
 }
 .naranja {
   background: #f0932b;
 }
-.naranja .light {
+.naranja.light {
   background: #ffbe76;
 }
 .verde {
   background: #6ab04c;
 }
-.verde .light {
+.verde.light {
   background: #badc58;
 }
 .btn-start {
